@@ -1,0 +1,94 @@
+header{
+    height: 64px;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    box-shadow: 0 2px 12px;
+    display: flex;
+}
+
+header .header {
+    display: flex;
+    margin: 0 auto;
+    width: 1fr;
+    justify-content: space-between;
+}
+
+header .header nav {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    margin: auto;
+    white-space: nowrap;
+    justify-content: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  header .header nav > a {
+    display: flex;
+    padding: 2px 5px;
+    margin: 0 10px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 7px;
+  }
+
+  header .header nav > a:hover {
+    -webkit-animation-name: hover-background;
+            animation-name: hover-background;
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+    color: #fff;
+    background-color: #ee1212;
+  }
+
+  header img:hover {
+    cursor: pointer;
+  }
+  header .logos {
+    display: flex;
+  }
+
+  header .logos img {
+    margin: auto;
+    max-height: 30px;
+  }
+
+  header .icons {
+    display: inline-flex;
+  }
+
+  header .icons img {
+    max-height: 18px;
+    margin: auto 6px;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+
+
+  @keyframes hover-background {
+    from {
+      color: #000;
+      background-color: #fff;
+    }
+    to {
+      color: #fff;
+      background-color: #ee1212;
+    }
+  }
+
+  @-webkit-keyframes hover-background {
+    from {
+      color: #000;
+      background-color: #fff;
+    }
+    to {
+      color: #fff;
+      background-color: #ee1212;
+    }
+  }
+ 
