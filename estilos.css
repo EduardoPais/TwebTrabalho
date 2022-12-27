@@ -69,6 +69,158 @@ header .header nav {
     display: none;
   }
 
+  /* image gallery slider */
+.slides-container {
+  position: absolute;
+  width: 100vw;
+  height: 600px;
+  margin: auto;
+  margin-top: 64px;
+}
+.slides{
+  display: block;
+  text-align: center;
+}
+.slides img{
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+.slide-in {
+  animation: slide-in 5s ease;
+}
+
+.imagens-stockoff {
+  margin-top: 100px;
+  display: flex;
+  text-align: center;
+  
+}
+
+.imagens-stockoff img {
+  width: 416px;
+  max-width: 416px;
+  height: 300px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: 10px;
+  margin-left: 32px;
+}
+
+.vantagens {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  padding:50px;
+}
+
+.vantagens .vantagens-header {
+  width: 100%;
+  margin-bottom: 42px;
+}
+
+.vantagens .title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.vantagens .vantagens-titulo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #000000;
+  display: block;
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+}
+.vantagens .vantagens-imagens {
+  margin-left: 27px;
+  width: 270px;
+  float: left;
+  padding: 20px;
+}
+
+.matrizauto-eco{
+  width: 100%;
+  padding: 100px 0px;
+}
+
+.matrizauto-eco img{
+ height: auto;
+}
+
+.matrizauto-text{
+  width: 550px;
+  text-align: justify;
+  margin-left: 20px;
+}
+
+.matrizeco{
+  width: 1130px;
+  max-width: 95%;
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.matrizauto-text h1{
+  color: #000;
+  font-size: 30px;
+}
+
+.matrizauto-text p{
+  color: grey;
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+button{
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-weight: bold;
+  padding:13px 30px;
+}
+
+
+
+
+
+
+
+
+
+@keyframes slide-in {
+  0% {
+      display: none;
+      transform: translateX(100%);
+  }
+  25% {
+      display: block;
+      transform: translateX(0%);
+  }
+  75% {
+      transform: translateX(0%);
+  }
+  100% {
+      display: none;
+      transform: translateX(-100%);
+  }
+}
+
 
   @keyframes hover-background {
     from {
