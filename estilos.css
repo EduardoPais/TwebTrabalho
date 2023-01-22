@@ -1,94 +1,297 @@
-header{
-    height: 64px;
-    background-color: white;
-    position: fixed;
-    z-index: 2;
-    width: 100vw;
-    box-shadow: 0 2px 12px;
-    display: flex;
+/*------General Start-------*/
+
+* {
+  font-family: "Interface", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-header .header {
-    display: flex;
-    margin: 0 auto;
-    width: 1fr;
-    justify-content: space-between;
+body{
+  margin: 0px;
+  overflow-x: hidden;
+  position : relative;
+  width: 100%;
 }
 
-header .header nav {
-    display: flex;
-    flex-direction: row;
-    width: 60vw;
-    margin: auto;
-    white-space: nowrap;
-    justify-content: center;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  
-  header .header nav > a {
-    display: flex;
-    padding: 2px 5px;
-    margin: 0 10px;
-    font-weight: 700;
-    font-size: 15px;
-    border-radius: 7px;
-  }
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  header .header nav > a:hover {
-    -webkit-animation-name: hover-background;
-            animation-name: hover-background;
-    -webkit-animation-duration: 400ms;
-            animation-duration: 400ms;
+main button{
+  margin-left: 30px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-weight: bold;
+  padding:13px 30px;
+}
+
+p{
+  margin: 10px;
+  font-family: sans-serif;
+}
+
+img{
+  object-fit: cover;
+}
+
+/*------General End-------*/
+
+/*-------Header Start--------*/
+
+header {
+  height: 64px;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  box-shadow: 0 2px 12px;
+  display: flex;
+  justify-content: space-between;
+  padding:0    50px;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .navbar nav {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  margin: 0 0 0 auto;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .navbar nav > a {
+  display: flex;
+  padding: 2px 5px;
+  margin: 0 10px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 7px;
+  justify-content: space-between;
+}
+
+header .navbar nav > a:hover {
+  -webkit-animation-name: hover-background;
+          animation-name: hover-background;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  color: #fff;
+  background-color: #ee1212;
+}
+
+header img:hover {
+  cursor: pointer;
+}
+
+header .logos {
+  display: flex;
+  justify-content: right;
+}
+
+header .logos img {
+  margin: auto;
+  max-height: 30px;
+}
+header .icons {
+  display: inline-flex;
+  margin-left: 435px;
+  margin-right: 5px;
+
+}
+
+header .icons img{
+  height: 30px;
+  margin-left: 10px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  header .navbar {
+    width: 90vw;
+  }
+  header .navbar nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@-webkit-keyframes hover-background {
+  from {
+    color: #000;
+    background-color: #fff;
+  }
+  to {
     color: #fff;
     background-color: #ee1212;
   }
-
-  header img:hover {
-    cursor: pointer;
-  }
-  header .logos {
-    display: flex;
-  }
-
-  header .logos img {
-    margin: auto;
-    max-height: 30px;
-  }
-
-  header .icons {
-    display: inline-flex;
-  }
-
-  header .icons img {
-    max-height: 18px;
-    margin: auto 6px;
-  }
-  
-  .hamburger {
-    display: none;
-  }
-
-  /* image gallery slider */
-.slides-container {
-  position: absolute;
-  width: 100vw;
-  height: 600px;
-  margin: auto;
-  margin-top: 64px;
 }
-.slides{
-  display: block;
+
+@keyframes hover-background {
+  from {
+    color: #000;
+    background-color: #fff;
+  }
+  to {
+    color: #fff;
+    background-color: #ee1212;
+  }
+}
+/*-------Header End--------*/
+
+/*-------Vender Start--------*/
+
+.vender *{
+  box-sizing: border-box;
+}
+
+.vender {
+  position: absolute;
+  z-index: 3;
+  top: 124px;
+  right: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  max-width: 560px;
+  padding: 40px 0 20px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.vender nav {
+  border-bottom: 1px solid #EEEEEE;
+  display: flex;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.vender nav a {
+  color: #757575;
+  padding-bottom: 16px;
+}
+
+.vender nav a:first-child {
+  margin-right: 34px;
+}
+
+.vender nav a.selected {
+  position: relative;
+}
+
+.vender nav a.selected:after {
+  position: absolute;
+  height: 3px;
+  background: #E41819;
+  bottom: 0;
+  left: 0;
+  width: 62px;
+  content: "";
+}
+
+.vender div {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 48%;
+}
+
+.vender div:nth-child(even) {
+  padding-left: 30px;
+}
+
+.vender div:nth-child(odd) {
+  padding-right: 30px;
+}
+
+.vender div > * {
+  width: 100%;
+  padding: 0 12px;
+  border-radius: 3px;
+  height: 47px;
+  border: 1px solid #cbcbcb;
+  color: #333;
+}
+
+.vender div > * option {
+  color: #333;
+}
+
+.vender div > input::-moz-placeholder {
+  color: #333;
+}
+
+.vender div > input:-ms-input-placeholder {
+  color: #333;
+}
+
+.vender div > input::placeholder {
+  color: #333;
+}
+
+.vender div.submit {
+  padding: 0;
+  margin: 18px 30px;
+  width: 100%;
+}
+
+.vender div.submit > input {
+  width: 100%;
+  height: 55px;
+  border: none;
+  background-color: #ee1212;
+  color: #fff;
+  font-size: 20px;
   text-align: center;
 }
-.slides img{
-  height: 500px;
-  width: 100%;
-  object-fit: cover;
+
+.vender span.form-required {
+  display: none;
+  background-color: #ffdada;
+  color: #852425;
+  padding: 5px 10px;
+  margin: 0 auto;
 }
-.slide-in {
-  animation: slide-in 5s ease;
+
+@media (max-width: 1380px) {
+  .vender {
+    right: 0;
+    left: 60px;
+  }
 }
+
+@media (max-width: 1023px) {
+  .vender {
+    left: 0;
+    margin: 0 auto;
+  }
+}
+
+/*-------Vender End--------*/
+
+/*------StockOff Start-------*/
 
 .imagens-stockoff {
   margin-top: 100px;
@@ -106,10 +309,107 @@ header .header nav {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: right;
   padding: 10px;
-  margin-left: 32px;
 }
+
+/*------StockOff End-------*/
+
+/*------Anuncio Start-------*/
+
+.anuncios{
+ margin-top: 3%;
+ grid-template-columns: 25% 25% 25% 25%;
+ width: 100%;
+ justify-items: center;
+ display: flex;
+ flex-wrap: wrap;
+ padding:5px;
+}
+
+.anuncios .destaque-header {
+  width: 100%;
+  margin-bottom: 42px;
+  display: grid;
+}
+
+.anuncios .title1 {
+  display: flex;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.anuncios h3{
+  width: 100%;
+}
+
+.campanha{
+  box-sizing: border-box;
+  border: 1px solid #CBCBCB;
+  border-radius: 6px;
+}
+
+.carro-imagem{
+  display: flex;
+}
+
+.nome-carro{
+  padding-top: 15px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+.desc-carro{
+  font-family: sans-serif;
+  color: #757575;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.carro-km-ano-outros a{
+  background: #F6F6F6;
+  color: #757575;
+  border-radius: 6px;
+  padding: 5px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.carro-preço{
+  font-family: sans-serif;
+  padding-left: 20px;
+  font-size: 25px;
+  color: red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.carro-destaque a{
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+  background: red;
+  padding: 5px;
+  margin-left: 20px;
+  border-radius: 6px;
+  font-family: sans-serif;
+  
+}
+
+/*------Anuncio End-------*/
+
+/*----------Vantagens Start---------*/
 
 .vantagens {
   margin-top: 100px;
@@ -125,6 +425,7 @@ header .header nav {
 
 .vantagens .title {
   font-style: normal;
+  font-family: sans-serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 150%;
@@ -133,21 +434,78 @@ header .header nav {
 
 .vantagens .vantagens-titulo {
   font-style: normal;
+  font-family: sans-serif;
   font-weight: 400;
   font-size: 20px;
-  line-height: 150%;
   color: #000000;
   display: block;
   width: 100%;
   display: block;
   margin-top: 15px;
 }
+
 .vantagens .vantagens-imagens {
-  margin-left: 27px;
   width: 270px;
   float: left;
   padding: 20px;
 }
+
+/*----------Vantagens End---------*/
+
+/*----------Logica Start---------*/
+
+.flex{
+  display: flex;
+}
+
+.logica{
+ display: flex;
+}
+
+.logica input{
+  display: flex;
+}
+
+.mmpaq{
+  margin-left: 100px;
+}
+
+.estados{
+  display: flex;
+  margin-left: 100px;
+}
+
+.estado1 a{
+  padding: 10px;
+}
+
+.estado2 a{
+  padding: 10px;
+}
+
+.estado3 a{
+  padding: 10px;
+}
+
+.pv{
+  margin-left: 100px;
+}
+
+#Financiamento{
+  display: none;
+  width: 400px;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid grey;
+  margin: 100px 100px 100px;
+}
+/*-------------Logica End----------*/
+
+
+/*-------------MatrizAutoEco Start----------*/
 
 .matrizauto-eco{
   width: 100%;
@@ -161,7 +519,6 @@ header .header nav {
 .matrizauto-text{
   width: 550px;
   text-align: justify;
-  margin-left: 20px;
 }
 
 .matrizeco{
@@ -174,73 +531,148 @@ header .header nav {
 }
 
 .matrizauto-text h1{
+  margin-left: 30px;
   color: #000;
   font-size: 30px;
 }
 
 .matrizauto-text p{
+  margin-left: 30px;
   color: grey;
   letter-spacing: 1px;
   line-height: 20px;
   font-size: 15px;
   margin-bottom: 30px;
 }
+/*-------------MatrizAutoEco End----------*/
 
-button{
-  background-color: red;
-  color: white;
-  text-decoration: none;
-  border: 1px solid transparent;
-  font-weight: bold;
-  padding:13px 30px;
+/*-------------Footer Start----------*/
+
+
+footer{
+  position: relative;
+  display: grid;
+  width: 100%;
+  background-color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 100;
+  grid-template-columns: 0.7fr 1.4fr 1fr 1.2fr 0.7fr;
+  grid-template-rows: auto;
+  line-height: 25px;
+  padding:70px 0px;
 }
 
-
-
-
-
-
-
-
-
-@keyframes slide-in {
-  0% {
-      display: none;
-      transform: translateX(100%);
-  }
-  25% {
-      display: block;
-      transform: translateX(0%);
-  }
-  75% {
-      transform: translateX(0%);
-  }
-  100% {
-      display: none;
-      transform: translateX(-100%);
-  }
+.socials{
+  grid-column: 2;
+  width: 180px;
+  position: relative;
 }
 
+.socials  p{
+  margin: 15px 0;
+}
 
-  @keyframes hover-background {
-    from {
-      color: #000;
-      background-color: #fff;
-    }
-    to {
-      color: #fff;
-      background-color: #ee1212;
-    }
-  }
+.socials  div{
+  position: absolute;
+  bottom: 0;
+}
 
-  @-webkit-keyframes hover-background {
-    from {
-      color: #000;
-      background-color: #fff;
-    }
-    to {
-      color: #fff;
-      background-color: #ee1212;
-    }
-  }
- 
+.footer_list{
+  display: flex;
+  grid-column: 3;
+  justify-content: center;
+  width: 180px;
+}
+
+.footer_list li{
+  color: #333;
+}
+
+.footer_list li>a{
+  color: #333;
+}
+
+.newsletter{
+  grid-column: 4;
+}
+
+.newsletter *{
+  margin-bottom: 20px;
+}
+
+.newsletter p:first-child{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.newsletter>input{
+  padding: 12px;
+  border-radius: 3px;
+  height: 54px;
+  width: 100%;
+  border: 1px solid #cbcbcb;
+  color: #333;
+}
+
+.newsletter>button{
+  height: 40px;
+  width: 25%;
+  font-weight: 50;
+}
+
+/*-------------Footer End----------*/
+
+/*-------------Contacts Start----------*/
+
+.contacts{
+  justify-content: space-between;
+}
+
+.contacts div{
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts div>img{
+  width: 100%;
+}
+
+.contacts span{
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 8px;
+  margin-top: 5px;
+  padding-left: 32px;
+}
+
+.contacts span:first-of-type{
+  font-weight: 700;
+  padding: 0;
+}
+
+.contacts a{
+  color: #ee1212;
+  text-decoration: underline #ee1212;
+}
+
+i.icons{
+  position: absolute;
+  top: 3px;
+  left: 0px;
+}
+  i.icons>img{
+  height: 20px;
+}
+
+.content {
+  max-width: 100%;
+  width: 1411px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  margin: 0px;
+  margin-top: 100px;
+}
+
+/*----------Contacts End---------*/

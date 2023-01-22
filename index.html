@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrizauto | Nº 1 em Carros Usados</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="logica.js"></script>
 </head>
+
 <body>
     <header>
-        <div class="header">
+        <div class="navbar">
             <div class="logos">
                 <img src="img/logo.svg" alt="Logo MatrizAuto" />
-                <img src="img/ec_23369366561f00abcacb8f.png" alt="Logo MatrizAuto" />
-                <img src="img/ecommerce_87229072161f00ac4ab9db.png" alt="Logo MatrizAuto" />
+                <img src="img/ec_23369366561f00abcacb8f.png" alt="Escolha Consumidor" />
+                <img src="img/ecommerce_87229072161f00ac4ab9db.png" alt="Produto Ano" />
             </div>
             <nav>
                 <a>Viaturas</a>
@@ -32,118 +35,289 @@
     </header>
 
     <main>
-        <div class="slides-container">
-            <div class="slides"><img src="img/slide1.jpg" alt="Slide 1" /></div>
-            <div class="slides"><img src="img/slide2.png" alt="Slide 2" /></div>
-            <form class="vender" action="">
-                <nav>
-                    <a href="#" class="selected">Comprar</a>
-                    <a href="#">Vender</a>
-                </nav>
-                <div id="brand"><select name="Marca" id="select-marca"></select></div>
-                <div id="model"><select name="Modelo" id="select-modelo" disabled><option value="">Modelo</option></select></div>
-                <div id="price"><input type="number" placeholder="Preço de Aquisição" /></div>
-                <div id="year"><select name="Ano" id="select-ano"></select></div>
-                <div id="mileage"><select name="Quilometragem" id="select-quilometragem"></select></div>
-                <div id="transmission"><select name="Transmissão" id="select-transmission">
+        <form class="vender" action="">
+            <nav>
+                <a href="#" class="selected">Comprar</a>
+                <a href="#">Vender</a>
+            </nav>
+            <div id="brand"><select name="Marca" id="select-brand"><option value="">Marca</option></select></div>
+            <div id="model"><select name="Modelo" id="select-model" disabled>
+                    <option value="">Modelo</option>
+                </select></div>
+            <div id="price"><input type="number" placeholder="Preço de Aquisição" /></div>
+            <div id="year"><select name="Ano" id="select-year"><option value="">Ano</option></select></div>
+            <div id="mileage"><select name="Quilometragem" id="select-km"><option value="">Kilómetros</option></select></div>
+            <div id="transmission"><select name="Transmissão" id="select-transmission">
                     <option value="0">Transmissão</option>
                     <option value="1">Manual</option>
                     <option value="2">Automática</option>
                 </select></div>
-                <div class="submit"><input type="submit" value="Procurar"></div>
-            </form>
-            <div class="gray_bar">
-              <span class="text">
-                <span style="font-weight: bold;">Stock Off!  </span>  OH OH OH Comprar carro é na Matrizauto.   <a href="https://www.matrizauto.pt/pt/stock-off/">Saiba Mais</a>
-              </span>
-            </span>
-          </div>
+            <div class="submit"><input value="Procurar"></div>
+        </form>
+        <img src="img/slide2.png" alt="Slide">
 
-          <div class="imagens-stockoff">
+        <div class="imagens-stockoff content">
             <img src="img/stockoff1.jpg">
             <img src="img/stockoff2.png">
             <img src="img/stockoff3.png">
-          </div>
-          <div class="vantagens">
+        </div>
+
+        <div class="anuncios content">
+            <div class="destaque-header">
+                <h3 class="title1">Carros em Destaque</h3>
+            </div>
+            <div class="campanha">
+                <img src="img/carro1.png" class="carro-imagem" width="302" height="201">
+                <p class="nome-carro">Mercedes Classe A</p>
+                <p class="desc-carro">Mercedes Classe A 180d</p>
+                <div class="carro-km-ano-outros">
+                    <a>Diesel</a>
+                    <a>Manual</a>
+                    <a>2015</a><br><br>
+                    <a>129.325</a>
+                </div><br><br>
+                <div class="carro-preço">35.250€</div><br>
+                <div class="carro-destaque">
+                    <a>Em Destaque</a>
+                </div>
+            </div>
+
+            <div class="campanha">
+                <img src="img/carro2.png" class="carro-imagem" width="302" height="201">
+                <p class="nome-carro">Renault Megane</p>
+                <p class="desc-carro">Renault Megane Carrinha</p>
+                <div class="carro-km-ano-outros">
+                    <a>Diesel</a>
+                    <a>Manual</a>
+                    <a>2017</a><br><br>
+                    <a>150.457</a>
+                </div><br><br>
+                <div class="carro-preço">23.000€</div><br>
+                <div class="carro-destaque">
+                    <a>Em Destaque</a>
+                </div>
+            </div>
+
+            <div class="campanha">
+                <img src="img/carro3.png" class="carro-imagem" width="302" height="201">
+                <p class="nome-carro">Lexus RX</p>
+                <p class="desc-carro">Lexus RX SUV</p>
+                <div class="carro-km-ano-outros">
+                    <a>Diesel</a>
+                    <a>Manual</a>
+                    <a>2018</a><br><br>
+                    <a>42.473</a>
+                </div><br><br>
+                <div class="carro-preço">54.500€</div><br>
+                <div class="carro-destaque">
+                    <a>Em Destaque</a>
+                </div>
+            </div>
+
+            <div class="campanha">
+                <img src="img/carro4.png" class="carro-imagem" width="302" height="201">
+                <p class="nome-carro">BMW Carrinha</p>
+                <p class="desc-carro">BMW 320d Touring </p>
+                <div class="carro-km-ano-outros">
+                    <a>Diesel</a>
+                    <a>Manual</a>
+                    <a>2007</a><br><br>
+                    <a>240.000</a>
+                </div><br><br>
+                <div class="carro-preço">32.300€</div><br>
+                <div class="carro-destaque">
+                    <a>Em Destaque</a>
+                </div><br>
+            </div>
+        </div>
+
+        <div class="vantagens content">
             <div class="vantagens-header">
-              <h2 class="title">Vantagens Matrizauto</h2>
+                <h2 class="title">Vantagens Matrizauto</h2>
             </div>
             <a href="https://www.matrizauto.pt/pt/viaturas-selecionadas-e-certificadas/" class="vantagens-imagens">
-                  <img src="img/vantagens1.png"/>
+                <img src="img/vantagens1.png" />
                 <span class="vantagens-titulo">Certificação 120 Pontos</span>
             </a>
-            <a href="/pt/devolucao-ou-troca/" class="vantagens-imagens" >
-                  <img src="img/vantagens2.png"/>
+            <a href="/pt/devolucao-ou-troca/" class="vantagens-imagens">
+                <img src="img/vantagens2.png" />
                 <span class="vantagens-titulo">Satisfação ou Devolução</span>
             </a>
-            <a href="/pt/garantia-ate-3-anos/" class="vantagens-imagens" >
-                  <img src="img/vantagens3.png"/>
+            <a href="/pt/garantia-ate-3-anos/" class="vantagens-imagens">
+                <img src="img/vantagens3.png" />
                 <span class="vantagens-titulo">Garantia de até 3 anos</span>
             </a>
-            <a href="/pt/tudo-num-so-local/" class="vantagens-imagens" >
-                  <img src="img/vantagens 4.png"/>
+            <a href="/pt/tudo-num-so-local/" class="vantagens-imagens">
+                <img src="img/vantagens 4.png" />
                 <span class="vantagens-titulo">Tudo num só local</span>
             </a>
         </div>
 
-        <!----Matrizauto Eco-------->
-        <seection class="matrizauto-eco">
+        <section class="matrizauto-eco content">
             <div class="matrizeco">
                 <img src="img/matrizauto-eco.png">
-            <div class="matrizauto-text">
-                <h1>Matrizauto Eco</h1>
-                <p>A evolução tecnológica verificada nos últimos anos em relação à autonomia e preço das baterias, a melhor eficiência dos tempos de carga, maior potência, 
-                    levam à consideração de compra de veículos 100% elétricos, como alternativa a um veículo 
-                    novo a combustão. Se está a pensar comprar um veículo elétrico, mas não sabe as implicações 
-                    positivas que esta compra vai causar na sua vida ou ainda desconhece o conceito de carros 
-                    létricos e as suas vantagens, o espaço Matrizauto Eco vai ajuda-lo.</p>
-                <button>Ver Carros Elétricos</button>
+                <div class="matrizauto-text">
+                    <h1>Matrizauto Eco</h1>
+                    <p>A evolução tecnológica verificada nos últimos anos em relação à autonomia e preço das
+                        baterias, a melhor eficiência dos tempos de carga, maior potência,
+                        levam à consideração de compra de veículos 100% elétricos, como alternativa a um veículo
+                        novo a combustão. Se está a pensar comprar um veículo elétrico, mas não sabe as implicações
+                        positivas que esta compra vai causar na sua vida ou ainda desconhece o conceito de carros
+                        létricos e as suas vantagens, o espaço Matrizauto Eco vai ajuda-lo.</p>
+                    <button>Ver Carros Elétricos</button>
+                </div>
             </div>
-        </div>
         </section>
 
+        <div class="flex">
+            <div class="logica">
+                <div class="mmpaq">
+                    <a>Marca</a>
+                    <input type="text" id="marca">
+                    <p></p>
+                    <a>Modelo</a>
+                    <input type="text" id="modelo">
+                    <p></p>
+                    <a>Preço de Aquisição</a>
+                    <input type="text" id="preco_aqui">
+                    <p></p>
+                    <a>Ano da Matricula</a>
+                    <input type="text" id="ano">
+                    <p></p>
+                    <a>Quilometragem</a>
+                    <input type="text" id="quilometragem">
+                    <p></p>
+                    <button onclick="orcamento()">Orçamento</button>
+                </div>
+                <div class="estados">
+                    <div class="estado1">
+                        <p>Mau Estado </p>
+                        <a id="marca_1">------</a>
+                        <p></p>
+                        <a id="modelo_1">------</a>
+                        <p></p>
+                        <a id="ano_1">------</a>
+                        <p></p>
+                        <a id="orcamento_1">------</a>
+                    </div>
+                    <div class="estado2">
+                        <p> Bom Estado</p>
+                        <a id="marca_2">------</a>
+                        <p></p>
+                        <a id="modelo_2">------</a>
+                        <p></p>
+                        <a id="ano_2">------</a>
+                        <p></p>
+                        <a id="orcamento_2">------</a>
+                    </div>
+                    <div class="estado3">
+                        <p>Muito Bom Estado</p>
+                        <a id="marca_3">------</a>
+                        <p></p>
+                        <a id="modelo_3">------</a>
+                        <p></p>
+                        <a id="ano_3">------</a>
+                        <p></p>
+                        <a id="orcamento_3">------</a>
+                    </div>
+                </div>
+                <p></p>
+                <div class="pv">
+                    <a>Preco do Carro</a>
+                    <p></p>
+                    <input type="text" id="preco_carro">
+                    <p></p>
+                    <a>Valor de Entrada</a>
+                    <p></p>
+                    <input type="text" id="valor_entrada">
+                    <p></p>
+                    <button onclick="financiamento()">Financiamento</button>
+                </div>
+            </div>
+            <div id="Financiamento">
+                <a id="financiamento_3_t"></a><br>
+                <a id="financiamento_3_m"></a><br>
+                <a id="financiamento_2_t"></a><br>
+                <a id="financiamento_2_m"></a><br>
+                <a id="financiamento_1_t"></a><br>
+                <a id="financiamento_1_m"></a><br>
+            </div>
+        </div>
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="contacts content">
+            <div>
+                <img src="img/loja_porto.png" />
+                <span>Porto</span>
+                <span><i class="icons"><img src="img/telephone.png"></i>226 156 410*</span>
+                <span><i class="icons"><img src="img/pin.png"></i>Rua de Santa Luzia Nº 1022 | 4250-415
+                    Porto</span>
+                <span><i class="icons"><img src="img/clock.png"></i> Seg a Sex: 09h - 21h | Fins-de-Semana e
+                    Feriados: 9h - 21h</span>
+                <span><i class="icons"><img src="img/google-maps.png"></i><a>Ir para o Google Maps</a></span>
+                <span><i class="icons"><img src="img/waze.png"></i><a>Ir para a Waze</a></span>
+                <span><i class="icons"><img src="img/red_car.png"></i><a>Ver Stock</a></span>
+            </div>
+            <div>
+                <img src="img/loja_sintra.png" />
+                <span>Sintra</span>
+                <span><i class="icons"><img src="img/telephone.png"></i>219 269 600*</span>
+                <span><i class="icons"><img src="img/pin.png"></i>IC19, SAÍDA 13 | 2725-397 Mem Martins</span>
+                <span><i class="icons"><img src="img/clock.png"></i> Seg a Sex: 09h - 22h | Fins-de-Semana e
+                    Feriados: 9h - 21h</span>
+                <span><i class="icons"><img src="img/google-maps.png"></i><a>Ir para o Google Maps</a></span>
+                <span><i class="icons"><img src="img/waze.png"></i><a>Ir para a Waze</a></span>
+                <span><i class="icons"><img src="img/red_car.png"></i><a>Ver Stock</a></span>
+            </div>
+            <div>
+                <img src="img/loja_aveiro.png" />
+                <span>Aveiro</span>
+                <span><i class="icons"><img src="img/telephone.png"></i>234 249 960*</span>
+                <span><i class="icons"><img src="img/pin.png"></i>Aveiro Reital Park | Lojas nºC,D,E1 e E2 | 3800-055 Aveiro</span>
+                <span><i class="icons"><img src="img/clock.png"></i>  Seg a Sex: 10h - 22h | Fins-de-Semana e Feriados: 10h - 22h</span>
+                <span><i class="icons"><img src="img/google-maps.png"></i><a>Ir para o Google Maps</a></span>
+                <span><i class="icons"><img src="img/waze.png"></i><a>Ir para a Waze</a></span>
+                <span><i class="icons"><img src="img/red_car.png"></i><a>Ver Stock</a></span>
+            </div>
+            <div>
+                <img src="img/loja_viseu.png" />
+                <span>Viseu</span>
+                <span><i class="icons"><img src="img/telephone.png"></i>255 788 198*</span>
+                <span><i class="icons"><img src="img/pin.png"></i>Viseu Retail Park | Avenida Forte Da Gama, Fragosela | 3505-639 Viseu</span>
+                <span><i class="icons"><img src="img/clock.png"></i> Seg a Sex: 09h - 21h | Fins-de-Semana e Feriados: 9h - 21h</span>
+                <span><i class="icons"><img src="img/google-maps.png"></i><a>Ir para o Google Maps</a></span>
+                <span><i class="icons"><img src="img/waze.png"></i><a>Ir para a Waze</a></span>
+                <span><i class="icons"><img src="img/red_car.png"></i><a>Ver Stock</a></span>
+            </div>
+        </div>
+        <br>
+        <footer>
+            <div class="socials">
+                <img src="img/logo-footer.svg" alt="Logo Matrizauto">
+                <p>Vá dos 0 aos 100 num clique. Siga-nos.</p>
+                <img src="img/socials-matrizauto.png" alt="Icons Socials">
+                <div>© 2023 matrizauto.pt</div>
+            </div>
+            <div class="footer_list">
+                <ul>
+                    <li><a href="#">Recrutamento</a></li>
+                    <li><a href="#">Apoio ao Cliente</a></li>
+                    <li><a href="#">Ral</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Livro de Reclamações Digital</a></li>
+                    <li><a href="#">Intermediação Crédito</a></li>
+                    <li><a href="#">Cancelar Subscrição de Comunicação</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <p>Subscrever Newsletter</p>
+                <input type="email" name="" id="" placeholder="Insira o seu e-mail">
+                <button class="sub">Subscrever</button>
+            </div>
+        </footer>
+        </div>
     </main>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    </main>
-
-
-
-
-
-
-
-
-
-    
-    
 </body>
+
 </html>
